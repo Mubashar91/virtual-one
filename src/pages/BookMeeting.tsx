@@ -105,7 +105,7 @@ export const BookMeeting = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button
-                  onClick={() => document.querySelector('.calendly-inline-widget')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => window.open("https://calendly.com/patryk-donocik/30min", "_blank", "noopener,noreferrer")}
                   className="bg-gradient-to-r from-gold to-yellow-600 hover:from-yellow-600 hover:to-gold text-black font-bold px-6 py-2 rounded-xl shadow-lg hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 border-2 border-gold/50"
                 >
                   <Calendar className="w-4 h-4 mr-2" />
@@ -348,7 +348,7 @@ export const BookMeeting = () => {
               <div className="bg-card border border-border rounded-xl p-2 shadow-lg">
                 <div
                   className="calendly-inline-widget rounded-lg overflow-hidden"
-                  data-url="https://calendly.com/mmubasharshahzad40/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&background_color=000000&text_color=ffffff&primary_color=d4af37"
+                  data-url="https://calendly.com/patryk-donocik/30min"
                   style={{ minWidth: "100%", height: "600px" }}
                 />
               </div>
