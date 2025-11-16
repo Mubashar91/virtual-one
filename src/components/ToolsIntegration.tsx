@@ -21,8 +21,6 @@ const tools = [
   { name: "Hootsuite", category: "Social Media" }
 ];
 
-const categories = ["Communication", "Project Management", "Productivity", "Design", "CRM", "Support", "CMS", "E-commerce", "Marketing", "SEO", "Social Media"];
-
 export const ToolsIntegration = () => {
   return (
     <motion.section 
