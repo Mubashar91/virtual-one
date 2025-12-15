@@ -3,14 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ThemeProvider";
 import { Menu, X, Sun, Moon } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
-  const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,42 +43,26 @@ export const Navbar = () => {
   };
 
   const navItems = [
-    { name: "Services", href: "#services" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Services", href: "/#services" },
+    { name: "How It Works", href: "/#how-it-works" },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "FAQ", href: "/#faq" },
   ];
-
-  const handleNavClick = async (hash: string) => {
-    const id = hash.replace('#', '');
-    const goScroll = () => {
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    };
-
-    if (location.pathname !== '/') {
-      navigate('/');
-      // Wait a tick for DOM to render on home, then scroll
-      setTimeout(goScroll, 350);
-    } else {
-      goScroll();
-    }
-    setIsOpen(false);
-  };
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/5"
-          : "bg-background/80 backdrop-blur-sm"
+          ? "bg-background/95 backdrop-blur-2xl border-b border-border/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)]"
+          : "bg-background/80 backdrop-blur-xl"
       }`}
+      style={{
+        backdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'blur(16px) saturate(150%)'
+      }}
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-6 lg:px-10 xl:px-12">
         <div className="flex items-center justify-between h-16 sm:h-18 md:h-[72px] lg:h-20">
@@ -92,27 +73,39 @@ export const Navbar = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center space-x-2 sm:space-x-3"
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gold rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110">
-              <span className="text-black font-bold text-base sm:text-lg md:text-lg lg:text-xl">D</span>
-            </div>
-            <span className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-foreground hover:text-gold transition-colors duration-300">Don Va</span>
+            <motion.div 
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gradient-to-br from-[hsl(211,100%,55%)] to-[hsl(199,89%,48%)] rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300"
+              whileHover={{ 
+                scale: 1.1, 
+                rotate: 5,
+                boxShadow: "0 10px 25px -5px rgba(0, 123, 255, 0.5)"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="text-white font-bold text-base sm:text-lg md:text-lg lg:text-xl">E</span>
+            </motion.div>
+            <motion.span 
+              className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              EmailPro Agency
+            </motion.span>
           </motion.div>
 
           {/* Desktop Navigation - Show on medium screens and up */}
           <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-6 xl:space-x-8">
             {navItems.map((item, index) => (
-              <motion.button
-                type="button"
+              <motion.a
                 key={item.name}
-                onClick={() => handleNavClick(item.href)}
+                href={item.href}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="relative text-foreground hover:text-gold transition-all duration-300 font-medium text-sm md:text-sm lg:text-base px-2 md:px-2.5 lg:px-3 py-2 rounded-lg hover:bg-gold/10 group whitespace-nowrap"
+                className="relative text-[hsl(210,15%,20%)] dark:text-foreground hover:text-[hsl(211,100%,50%)] dark:hover:text-gold transition-all duration-200 font-semibold text-sm md:text-sm lg:text-base px-2 md:px-2.5 lg:px-3 py-2 rounded-lg hover:bg-[hsl(210,20%,96%)] dark:hover:bg-gold/10 group whitespace-nowrap"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold group-hover:w-3/4 transition-all duration-300" />
-              </motion.button>
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[hsl(211,100%,50%)] to-[hsl(199,89%,48%)] group-hover:w-3/4 transition-all duration-300" />
+              </motion.a>
             ))}
           </div>
 
@@ -141,12 +134,12 @@ export const Navbar = () => {
               transition={{ duration: 0.6, delay: 0.45 }}
             >
               <Button
-                variant="gold-outline"
+                variant="gold"
                 size="sm"
-                onClick={() => navigate('/contact')}
-                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-6 py-2 md:py-2 lg:py-2 cursor-pointer hover:shadow-gold transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
+                onClick={() => window.location.href = '/contact'}
+                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-7 py-2 md:py-2 lg:py-2.5 cursor-pointer bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] hover:opacity-95 text-white border-0 hover:shadow-lg hover:shadow-[hsl(var(--brand-blue))]/30 transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
               >
-                Contact
+                Contact Us
               </Button>
             </motion.div>
             <motion.div
@@ -157,10 +150,10 @@ export const Navbar = () => {
               <Button
                 variant="gold"
                 size="sm"
-                onClick={() => navigate('/book-meeting')}
-                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-7 py-2 md:py-2 lg:py-2.5 cursor-pointer hover:shadow-lg hover:shadow-gold/30 transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
+                onClick={() => window.location.href = '/book-meeting'}
+                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-7 py-2 md:py-2 lg:py-2.5 cursor-pointer bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] hover:opacity-95 text-white border-0 hover:shadow-lg hover:shadow-[hsl(var(--brand-blue))]/30 transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
               >
-                Get Started
+                Book a Consultation
               </Button>
             </motion.div>
           </div>
@@ -217,17 +210,17 @@ export const Navbar = () => {
             >
               <div className="py-3 space-y-1">
                 {navItems.map((item, index) => (
-                  <motion.button
-                    type="button"
+                  <motion.a
                     key={item.name}
-                    onClick={() => handleNavClick(item.href)}
+                    href={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.05 }}
-                    className="block w-full text-left text-foreground hover:text-gold hover:bg-gold/10 active:bg-gold/20 transition-all duration-200 font-medium py-3 px-4 rounded-lg mx-2"
+                    className="block text-foreground hover:text-[hsl(211,100%,50%)] hover:bg-[hsl(211,100%,50%)]/10 active:bg-[hsl(211,100%,50%)]/20 transition-all duration-200 font-medium py-3 px-4 rounded-lg mx-2"
+                    onClick={() => setIsOpen(false)}
                   >
                     {item.name}
-                  </motion.button>
+                  </motion.a>
                 ))}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -235,28 +228,20 @@ export const Navbar = () => {
                   transition={{ duration: 0.2, delay: navItems.length * 0.05 }}
                   className="pt-3 px-3 border-t border-border/50"
                 >
-                  <div className="grid grid-cols-2 gap-2">
-                    <Button
-                      variant="gold-outline"
-                      onClick={() => {
-                        navigate('/contact');
-                        setIsOpen(false);
-                      }}
-                      className="w-full text-base py-3 cursor-pointer font-semibold hover:shadow-gold transition-all duration-300"
-                    >
-                      Contact
-                    </Button>
-                    <Button
-                      variant="gold"
-                      onClick={() => {
-                        navigate('/book-meeting');
-                        setIsOpen(false);
-                      }}
-                      className="w-full text-base py-3 cursor-pointer font-semibold hover:shadow-lg transition-all duration-300"
-                    >
-                      Get Started
-                    </Button>
-                  </div>
+                  <Button
+                    variant="gold"
+                    onClick={() => window.location.href = '/contact'}
+                    className="w-full mb-2 text-base py-3 cursor-pointer font-semibold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] hover:opacity-95 text-white border-0 hover:shadow-lg transition-all duration-300"
+                  >
+                    Contact Us
+                  </Button>
+                  <Button
+                    variant="gold"
+                    onClick={() => window.location.href = '/book-meeting'}
+                    className="w-full text-base py-3 cursor-pointer font-semibold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] hover:opacity-95 text-white border-0 hover:shadow-lg transition-all duration-300"
+                  >
+                    Book a Consultation
+                  </Button>
                 </motion.div>
               </div>
             </motion.div>

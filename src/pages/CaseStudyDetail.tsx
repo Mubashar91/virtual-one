@@ -1,7 +1,7 @@
 import { ArrowLeft, CheckCircle2, Quote } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
-import { caseStudies } from "@/data/caseStudies";
+import { caseStudies } from "@/components/CaseStudies";
 
 const CaseStudyDetail = () => {
   const navigate = useNavigate();
@@ -34,10 +34,10 @@ const CaseStudyDetail = () => {
           {/* Back button */}
           <button
             onClick={() => navigate('/')}
-            className="mt-6 mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/80 text-sm font-medium text-foreground shadow-sm hover:border-gold/60 hover:bg-gold/10 hover:text-gold transition-colors duration-200 group"
+            className="mb-6 flex items-center gap-2 bg-gold/10 text-gold hover:bg-gold/20 transition-colors font-medium group px-3 py-2 rounded-md"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span>Back to Home</span>
+            Back to Home
           </button>
 
           <div className="max-w-6xl mx-auto">
@@ -70,12 +70,12 @@ const CaseStudyDetail = () => {
               {/* Key Stats */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                 <div className="bg-gold/5 border border-gold/20 rounded-lg p-5 text-center">
-                  <div className="text-3xl font-bold text-gold mb-1">{caseStudy.stats.costSaved}</div>
-                  <div className="text-xs text-muted-foreground">Annual Savings</div>
+                  <div className="text-3xl font-bold text-gold mb-1">{caseStudy.stats.mainResult}</div>
+                  <div className="text-xs text-muted-foreground">Main Result</div>
                 </div>
                 <div className="bg-gold/5 border border-gold/20 rounded-lg p-5 text-center">
-                  <div className="text-3xl font-bold text-gold mb-1">{caseStudy.stats.vaCount}</div>
-                  <div className="text-xs text-muted-foreground">Team Size</div>
+                  <div className="text-3xl font-bold text-gold mb-1">{caseStudy.stats.seoFocus}</div>
+                  <div className="text-xs text-muted-foreground">Focus</div>
                 </div>
                 <div className="bg-gold/5 border border-gold/20 rounded-lg p-5 text-center">
                   <div className="text-3xl font-bold text-gold mb-1">{caseStudy.stats.timeframe}</div>
@@ -160,7 +160,7 @@ const CaseStudyDetail = () => {
                 
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
                   Ready to Achieve{" "}
-                  <span className="bg-gradient-to-r from-gold via-yellow-500 to-gold bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[hsl(var(--brand-blue))] via-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">
                     Similar Results?
                   </span>
                 </h3>
@@ -180,7 +180,7 @@ const CaseStudyDetail = () => {
                   
                   <button
                     onClick={() => navigate('/')}
-                    className="w-full sm:w-auto px-8 py-4 bg-card border-2 border-gold/30 hover:border-gold/50 text-foreground font-semibold rounded-xl transition-all duration-300 hover:bg-gold/5"
+                    className="w-full sm:w-auto px-8 py-4 bg-gold/10 text-gold border-2 border-gold/30 hover:bg-gold/20 font-semibold rounded-xl transition-all duration-300"
                   >
                     View All Case Studies
                   </button>

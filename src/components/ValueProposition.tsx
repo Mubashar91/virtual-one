@@ -1,26 +1,26 @@
-import { Shield, Clock, Users, Lock } from "lucide-react";
+import { Shield, Clock, Zap, Lock } from "lucide-react";
 import { motion } from "framer-motion";
 
 const values = [
   {
-    icon: Shield,
-    title: "70% Cost Reduction",
-    description: "Guaranteed in most cases"
+    icon: Zap,
+    title: "80% Time Savings",
+    description: "Reclaim hours every day"
   },
   {
-    icon: Users,
-    title: "Native German Quality Control",
-    description: "Direct oversight by native speakers"
+    icon: Shield,
+    title: "Professional Management",
+    description: "Expert email handling"
   },
   {
     icon: Clock,
-    title: "24h Replacement Guarantee",
-    description: "Seamless continuity assured"
+    title: "24/7 Monitoring",
+    description: "Never miss important emails"
   },
   {
     icon: Lock,
-    title: "Full Confidentiality & NDAs",
-    description: "Your data stays secure"
+    title: "Complete Security & Privacy",
+    description: "Your data stays protected"
   }
 ];
 
@@ -34,7 +34,7 @@ export const ValueProposition = () => {
       transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
     >
       {/* Top border gradient */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[hsl(199,89%,52%)] to-transparent" />
       
       <div className="container mx-auto px-4">
         <motion.div 
@@ -44,8 +44,8 @@ export const ValueProposition = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why <span className="text-gold">200+</span> Businesses Choose Us
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Why <span className="text-[hsl(199,89%,52%)]">500+</span> Professionals Trust Our Email Management
           </h2>
         </motion.div>
         
@@ -53,7 +53,13 @@ export const ValueProposition = () => {
           {values.map((value, index) => (
             <motion.div 
               key={index}
-              className="group relative p-8 rounded-2xl bg-card border-2 border-gold/20 hover:border-gold hover:shadow-[0_20px_60px_-15px_hsl(45_80%_55%/0.4)] transition-all duration-500 hover:-translate-y-3"
+              className="group relative p-8 rounded-2xl bg-gradient-to-br from-[hsl(211,100%,45%)] via-[hsl(211,100%,50%)] to-[hsl(199,89%,48%)] text-white border-2 border-[hsl(211,100%,60%)]/50 hover:border-[hsl(211,100%,70%)] hover:shadow-[0_25px_70px_-15px_rgba(0,123,255,0.5)] transition-all duration-500 hover:-translate-y-4"
+              whileHover={{ 
+                scale: 1.02,
+                rotateY: 5,
+                z: 50
+              }}
+              style={{ transformStyle: "preserve-3d" }}
               initial={{ opacity: 0, y: 80, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -64,22 +70,22 @@ export const ValueProposition = () => {
               }}
             >
               {/* Shine effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[hsl(211,100%,60%)]/30 via-[hsl(199,89%,52%)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative">
-                <div className="mb-6 inline-flex p-4 rounded-xl bg-gold/10 text-gold group-hover:bg-gold group-hover:text-black group-hover:scale-110 transition-all duration-500 shadow-[0_8px_20px_-8px_hsl(45_80%_55%/0.3)]">
+                <div className="mb-6 inline-flex p-4 rounded-xl bg-gradient-to-br from-[hsl(199,89%,52%)] via-[hsl(211,100%,55%)] to-[hsl(211,100%,60%)] text-white ring-1 ring-[hsl(199,89%,52%)]/30 group-hover:scale-110 transition-all duration-500 shadow-[0_18px_40px_-12px_rgba(0,123,255,0.6)]">
                   <value.icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-gold transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-3 text-white transition-colors duration-300">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-blue-50 leading-relaxed">
                   {value.description}
                 </p>
               </div>
               
               {/* Corner accent */}
-              <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-gold/0 group-hover:border-gold/50 rounded-tr-2xl transition-all duration-500" />
+              <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-[hsl(211,100%,70%)]/0 group-hover:border-[hsl(199,89%,60%)]/50 rounded-tr-2xl transition-all duration-500" />
             </motion.div>
           ))}
         </div>

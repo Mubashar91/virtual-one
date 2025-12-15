@@ -12,229 +12,123 @@ interface BlogPost {
   readTime: string;
   category: string;
   image: string;
+  seoTopics?: never;
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "How Virtual Assistants Can Save Your Business 70% on Operational Costs",
-    excerpt: "Discover the proven strategies that successful businesses use to dramatically reduce costs while maintaining quality through virtual assistants.",
+    title: "Inbox Zero: Strategies for Email Management Success",
+    excerpt: "Master the art of inbox organization with proven strategies for achieving and maintaining inbox zero.",
     content: `
-      <h2>The Cost Crisis in Modern Business</h2>
-      <p>In today's competitive market, businesses are constantly looking for ways to reduce operational costs without sacrificing quality. One of the most effective solutions that has emerged is the strategic use of virtual assistants.</p>
-      
-      <h3>Breaking Down the Savings</h3>
-      <p>When you hire a virtual assistant instead of a full-time employee, you save on:</p>
+      <h2>Key Strategies</h2>
       <ul>
-        <li>Office space and equipment</li>
-        <li>Benefits and insurance</li>
-        <li>Training and onboarding costs</li>
-        <li>Paid time off and sick leave</li>
-        <li>Taxes and administrative overhead</li>
+        <li>Priority-based email sorting</li>
+        <li>Automated filtering and labeling</li>
+        <li>Response templates and workflows</li>
+        <li>Daily review and maintenance</li>
       </ul>
-      
-      <h3>Real-World Success Stories</h3>
-      <p>We've helped over 200 businesses achieve an average of 70% cost reduction. One e-commerce company reduced their customer service costs from €8,000/month to €2,400/month while actually improving response times.</p>
-      
-      <h3>Quality Doesn't Have to Suffer</h3>
-      <p>The key is working with a service that provides native quality control. At DON VA, every deliverable is reviewed by native German-speaking managers, ensuring your standards are always met.</p>
-      
-      <h3>Getting Started</h3>
-      <p>The transition to virtual assistants doesn't have to be complicated. Start with one VA handling routine tasks, measure the results, and scale from there. Most of our clients see positive ROI within the first month.</p>
     `,
-    author: "Michael Schmidt",
-    date: "March 15, 2024",
-    readTime: "5 min read",
-    category: "Cost Optimization",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop"
+    author: "Email Team",
+    date: "October 15, 2025",
+    readTime: "7 min read",
+    category: "Best Practices",
+    image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&auto=format&fit=crop&q=80"
   },
   {
     id: 2,
-    title: "5 Tasks You Should Delegate to a Virtual Assistant Today",
-    excerpt: "Stop wasting time on routine tasks. Learn which activities you should delegate immediately to free up your schedule for strategic work.",
+    title: "Email Automation: Save Hours Every Week",
+    excerpt: "Implement smart automation rules and filters to streamline your email workflow and boost productivity.",
     content: `
-      <h2>Time is Your Most Valuable Asset</h2>
-      <p>As a business owner or manager, your time should be spent on high-value activities that drive growth. Yet many professionals find themselves bogged down in routine tasks that could easily be delegated.</p>
-      
-      <h3>1. Email Management</h3>
-      <p>Your VA can filter, categorize, and respond to routine emails, flagging only the important ones for your attention. This alone can save 2-3 hours per day.</p>
-      
-      <h3>2. Calendar Management</h3>
-      <p>Let your VA handle scheduling, rescheduling, and coordinating meetings. They can manage time zones, send reminders, and ensure you're always prepared.</p>
-      
-      <h3>3. Social Media Management</h3>
-      <p>Content scheduling, engagement monitoring, and basic customer service on social platforms can all be handled by a skilled VA.</p>
-      
-      <h3>4. Data Entry and Research</h3>
-      <p>Whether it's updating CRM systems, conducting market research, or compiling reports, VAs excel at these detail-oriented tasks.</p>
-      
-      <h3>5. Customer Support</h3>
-      <p>First-line customer support, handling common questions, and escalating complex issues can be managed efficiently by trained VAs.</p>
-      
-      <h3>The Impact</h3>
-      <p>By delegating these five tasks, most executives free up 15-20 hours per week. That's time you can reinvest in strategy, business development, or work-life balance.</p>
+      <h2>Automation Tips</h2>
+      <ul>
+        <li>Smart filters and auto-labels</li>
+        <li>Scheduled send and follow-ups</li>
+        <li>Template responses for common queries</li>
+        <li>Priority inbox configuration</li>
+      </ul>
     `,
-    author: "Sarah Weber",
-    date: "March 10, 2024",
-    readTime: "4 min read",
-    category: "Productivity",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop"
+    author: "Automation Team",
+    date: "October 8, 2025",
+    readTime: "6 min read",
+    category: "Automation",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80"
   },
   {
     id: 3,
-    title: "The Complete Guide to Scaling Your Business with Virtual Teams",
-    excerpt: "Learn the proven framework for building and managing a high-performing virtual team that drives real business results.",
+    title: "Email Security Best Practices for Businesses",
+    excerpt: "Protect your business communications with essential email security measures and protocols.",
     content: `
-      <h2>Why Virtual Teams are the Future</h2>
-      <p>The traditional office model is becoming obsolete. Virtual teams offer flexibility, cost savings, and access to global talent that physical offices simply can't match.</p>
-      
-      <h3>Phase 1: Starting Small</h3>
-      <p>Begin with one VA handling a specific function. This allows you to:</p>
+      <h2>Security Essentials</h2>
       <ul>
-        <li>Test the waters with minimal risk</li>
-        <li>Develop your management processes</li>
-        <li>Identify what works for your business</li>
-        <li>Build confidence in the model</li>
+        <li>Two-factor authentication setup</li>
+        <li>Phishing detection and prevention</li>
+        <li>Encryption and secure protocols</li>
+        <li>Regular security audits</li>
       </ul>
-      
-      <h3>Phase 2: Expanding Strategically</h3>
-      <p>Once you've proven the concept, scale strategically. Add VAs for complementary functions, creating a well-rounded team that covers all your operational needs.</p>
-      
-      <h3>Phase 3: Building Systems</h3>
-      <p>As your team grows, invest in proper systems:</p>
-      <ul>
-        <li>Project management tools (Asana, Trello)</li>
-        <li>Communication platforms (Slack, Teams)</li>
-        <li>Documentation and SOPs</li>
-        <li>Performance tracking metrics</li>
-      </ul>
-      
-      <h3>Managing Across Time Zones</h3>
-      <p>With VAs in different time zones, you can achieve 24/7 operations. The key is clear handoff procedures and asynchronous communication practices.</p>
-      
-      <h3>Quality Control</h3>
-      <p>This is where many businesses struggle. At DON VA, we solve this with native German managers who review all work before delivery, ensuring consistent quality.</p>
-      
-      <h3>The Results</h3>
-      <p>Companies that successfully scale with virtual teams typically see 3x growth in operational capacity without proportional cost increases. It's not just about saving money—it's about scaling smart.</p>
     `,
-    author: "Thomas Müller",
-    date: "March 5, 2024",
-    readTime: "7 min read",
-    category: "Business Growth",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop"
+    author: "Security Team",
+    date: "September 28, 2025",
+    readTime: "5 min read",
+    category: "Security",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80"
   },
   {
     id: 4,
-    title: "Remote Work Revolution: Why Virtual Assistants Are Essential in 2024",
-    excerpt: "The future of work is here. Discover why businesses that embrace virtual assistants are outperforming their competitors.",
+    title: "Professional Email Etiquette Guide",
+    excerpt: "Master the art of professional email communication with these essential etiquette tips and templates.",
     content: `
-      <h2>The Shift to Remote Work</h2>
-      <p>The pandemic accelerated a trend that was already underway: the shift to remote work. Now, businesses are discovering that virtual assistants offer advantages that go far beyond cost savings.</p>
-      
-      <h3>Access to Global Talent</h3>
-      <p>When you're not limited by geography, you can hire the best person for the job, regardless of where they live. This means access to specialized skills that might not be available in your local market.</p>
-      
-      <h3>24/7 Operations</h3>
-      <p>With VAs in different time zones, your business never sleeps. Customer inquiries get answered, tasks get completed, and opportunities don't slip through the cracks.</p>
-      
-      <h3>Flexibility and Scalability</h3>
-      <p>Need more support during peak season? Scale up. Slower period? Scale down. Virtual assistants offer flexibility that traditional hiring simply can't match.</p>
-      
-      <h3>The Competitive Advantage</h3>
-      <p>Companies using virtual assistants are moving faster, spending less, and achieving more. In today's competitive market, that's not just an advantage—it's essential for survival.</p>
+      <h2>Key Points</h2>
+      <ul>
+        <li>Subject line best practices</li>
+        <li>Professional tone and formatting</li>
+        <li>Response time expectations</li>
+        <li>Email signature standards</li>
+      </ul>
     `,
-    author: "Anna Fischer",
-    date: "February 28, 2024",
-    readTime: "6 min read",
-    category: "Remote Work",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=500&fit=crop"
+    author: "Communication Team",
+    date: "September 15, 2025",
+    readTime: "8 min read",
+    category: "Etiquette",
+    image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&auto=format&fit=crop&q=80"
   },
   {
     id: 5,
-    title: "How to Onboard a Virtual Assistant: A Step-by-Step Guide",
-    excerpt: "Get your new VA up to speed quickly with this comprehensive onboarding framework used by successful businesses.",
+    title: "Email Campaign Management: From Strategy to Execution",
+    excerpt: "Learn how to plan, execute, and optimize email campaigns that drive engagement and conversions.",
     content: `
-      <h2>The Importance of Proper Onboarding</h2>
-      <p>A well-structured onboarding process is crucial for VA success. It sets expectations, builds confidence, and ensures your VA can hit the ground running.</p>
-      
-      <h3>Week 1: Foundation</h3>
-      <p>Start with the basics:</p>
+      <h2>Campaign Steps</h2>
       <ul>
-        <li>Company overview and values</li>
-        <li>Tool access and training</li>
-        <li>Communication protocols</li>
-        <li>Initial task assignments</li>
+        <li>Audience segmentation strategies</li>
+        <li>Content planning and scheduling</li>
+        <li>A/B testing and optimization</li>
+        <li>Performance tracking and analytics</li>
       </ul>
-      
-      <h3>Week 2: Integration</h3>
-      <p>Deepen their understanding:</p>
-      <ul>
-        <li>Process documentation review</li>
-        <li>Team introductions</li>
-        <li>More complex task assignments</li>
-        <li>First feedback session</li>
-      </ul>
-      
-      <h3>Week 3-4: Independence</h3>
-      <p>Build autonomy:</p>
-      <ul>
-        <li>Gradual reduction in oversight</li>
-        <li>Problem-solving opportunities</li>
-        <li>Performance metrics review</li>
-        <li>Long-term goal setting</li>
-      </ul>
-      
-      <h3>Best Practices</h3>
-      <p>Document everything, communicate clearly, provide regular feedback, and celebrate wins. A good onboarding process pays dividends for months to come.</p>
     `,
-    author: "Marcus Klein",
-    date: "February 20, 2024",
-    readTime: "5 min read",
-    category: "Management",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop"
+    author: "Campaign Team",
+    date: "August 30, 2025",
+    readTime: "9 min read",
+    category: "Campaigns",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
   },
   {
     id: 6,
-    title: "Virtual Assistants vs. Full-Time Employees: A Cost Comparison",
-    excerpt: "Breaking down the real costs of hiring. The numbers might surprise you.",
+    title: "Email Analytics: Measuring What Matters",
+    excerpt: "Track the right metrics to understand email performance and make data-driven decisions.",
     content: `
-      <h2>The True Cost of Employment</h2>
-      <p>When comparing VAs to full-time employees, most businesses only look at salary. But the real cost of employment goes much deeper.</p>
-      
-      <h3>Full-Time Employee Costs</h3>
-      <p>For a €40,000/year employee, actual costs include:</p>
+      <h2>Key Metrics</h2>
       <ul>
-        <li>Base salary: €40,000</li>
-        <li>Benefits (health, pension): €8,000</li>
-        <li>Taxes and insurance: €6,000</li>
-        <li>Office space and equipment: €4,000</li>
-        <li>Training and development: €2,000</li>
-        <li>Paid time off (20 days): €3,000</li>
-        <li><strong>Total: €63,000/year</strong></li>
+        <li>Open rates and click-through rates</li>
+        <li>Response time analytics</li>
+        <li>Email volume and patterns</li>
+        <li>Productivity measurements</li>
       </ul>
-      
-      <h3>Virtual Assistant Costs</h3>
-      <p>For equivalent work output:</p>
-      <ul>
-        <li>VA service fee: €18,000/year</li>
-        <li>No benefits required</li>
-        <li>No office costs</li>
-        <li>No paid time off</li>
-        <li><strong>Total: €18,000/year</strong></li>
-      </ul>
-      
-      <h3>The Savings</h3>
-      <p>That's a 71% cost reduction. And this doesn't even account for recruitment costs, turnover, or management overhead.</p>
-      
-      <h3>When to Choose Each</h3>
-      <p>Full-time employees make sense for core strategic roles. VAs excel at operational tasks, support functions, and scalable work.</p>
     `,
-    author: "Lisa Hoffmann",
-    date: "February 15, 2024",
-    readTime: "6 min read",
-    category: "Cost Analysis",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop"
+    author: "Analytics Team",
+    date: "August 12, 2025",
+    readTime: "8 min read",
+    category: "Analytics",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
   }
 ];
 
@@ -259,77 +153,101 @@ export const Blog = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gold/10 text-gold text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
-            Latest Insights
+          <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
+            Email Insights
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground">
-            Blog & <span className="text-gold">Resources</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(222,47%,11%)] dark:text-foreground">
+            Blog & <span className="bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Email Guides</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Expert tips, strategies, and insights to help you scale your business with virtual assistants.
+            Expert email management strategies, automation tips, security best practices, and productivity guides to master your inbox.
           </p>
         </motion.div>
 
         {/* Blog Grid */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
             {blogPosts.map((post, index) => (
-            <motion.article
-              key={post.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-card border border-border/50 rounded-xl sm:rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] transition-all duration-300 cursor-pointer w-full"
-              onClick={() => navigate(`/blog/${post.id}`)}
-              whileHover={{ y: -8 }}
-            >
-              {/* Image */}
-              <div className="relative h-44 sm:h-52 md:h-48 lg:h-56 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-gold text-foreground text-xs font-bold rounded-full">
-                    {post.category}
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-4 sm:p-5 lg:p-6">
-                <div className="flex items-center gap-3 sm:gap-4 text-xs text-muted-foreground mb-2 sm:mb-3">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    <span>{post.date}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-gold transition-colors line-clamp-2">
-                  {post.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-xs sm:text-sm text-muted-foreground">By {post.author}</span>
-                  <div className="flex items-center gap-1 sm:gap-2 text-gold font-semibold text-xs sm:text-sm group-hover:gap-2 sm:group-hover:gap-3 transition-all">
-                    <span className="hidden sm:inline">Read More</span>
-                    <span className="sm:hidden">Read</span>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.7, 
+                  delay: index * 0.1,
+                  ease: [0.23, 1, 0.32, 1],
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 20
+                }}
+                className="group relative bg-card/80 backdrop-blur-sm border border-[hsl(215,32%,91%)] dark:border-border/40 rounded-2xl overflow-hidden hover:border-[hsl(var(--gold))]/60 dark:hover:border-[hsl(var(--gold))]/60 hover:shadow-[0_30px_80px_-20px_hsl(217_91%_60%/0.35),0_0_40px_hsl(217_91%_60%/0.15)] dark:hover:shadow-[0_30px_80px_-20px_rgba(59,130,246,0.3),0_0_40px_rgba(59,130,246,0.1)] transition-all duration-300 cursor-pointer w-full flex flex-col hover:-translate-y-2"
+                onClick={() => navigate(`/blog/${post.id}`)}
+                whileHover={{ 
+                  y: -6, 
+                  scale: 1.01,
+                  transition: {
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 30,
+                    mass: 0.5
+                  }
+                }}
+              >
+                {/* Hover glow border */}
+                <div className="pointer-events-none absolute -inset-px rounded-xl sm:rounded-xl lg:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[hsl(var(--gold))]/20 via-transparent to-[hsl(var(--brand-blue))]/20" />
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[hsl(217,91%,65%)] to-transparent opacity-60" />
+                {/* Image */}
+                <div className="relative h-48 sm:h-52 lg:h-56 overflow-hidden flex-shrink-0">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Subtle image gradient for legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                    <span className="px-2.5 py-1 sm:px-3 backdrop-blur-[2px] bg-card/90 dark:bg-[hsl(var(--gold))] text-[hsl(222,47%,20%)] dark:text-white text-[10px] sm:text-xs font-bold rounded-full shadow-sm">
+                      {post.category}
+                    </span>
                   </div>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+
+                {/* Content */}
+                <div className="p-4 sm:p-5 lg:p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-[hsl(var(--gold))] dark:text-[hsl(var(--gold))] mb-2 sm:mb-3 flex-wrap">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <span className="truncate">{post.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2 sm:mb-3 text-[hsl(222,47%,20%)] dark:text-white transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[hsl(220,30%,50%)] dark:text-white mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex items-center justify-between mt-auto pt-3 border-t border-[hsl(240,40%,92%)] dark:border-[hsl(240,30%,35%)]/50">
+                    <span className="text-[10px] sm:text-xs text-[hsl(var(--brand-blue))] dark:text-[hsl(var(--brand-blue))] truncate">By {post.author}</span>
+                    <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                      <button className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-card dark:bg-white/10 text-[hsl(var(--gold))] dark:text-white border border-[hsl(var(--gold))]/30 dark:border-white/20 hover:bg-gradient-to-r hover:from-[hsl(var(--gold))] hover:to-[hsl(var(--brand-blue))] hover:text-white hover:border-transparent transition-all duration-300 shadow-sm">
+                        <span className="hidden sm:inline">Read</span>
+                        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
           </div>
         </div>
       </div>
